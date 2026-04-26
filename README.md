@@ -24,3 +24,9 @@ Projeto desenvolvido em Java simulando um sistema bancário com operações bás
 1. Clone o repositório:
 
 git clone https://github.com/samuelclaudino1994-crypto/Sistema-Banco-.git
+
+📚 Aprendizados
+Lógica de programação
+Organização de código
+Uso de classes e objetos
+👨‍💻 Projeto desenvolvido para fins de estudo
