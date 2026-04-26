@@ -6,6 +6,7 @@ public class CaixaEletronico {
         System.out.println("\n--- MENU ---");
         System.out.println("1 - Depositar");
         System.out.println("2 - Sacar");
+        System.out.println("3 - Transferência");
         System.out.println("4 - Extrato");
         System.out.println("5 - Criar conta");
         System.out.println("0 - Sair");
@@ -46,6 +47,22 @@ public class CaixaEletronico {
                             System.out.println("Erro no saque!");
                         break;
 
+                    case 3: // transferência
+                        System.out.print("Conta origem: ");
+                        int origem = leitor.nextInt();
+
+                        System.out.print("Conta destino: ");
+                        int destino = leitor.nextInt();
+
+                        System.out.print("Valor: ");
+                        double valor = leitor.nextDouble();
+
+                        if (banco.transferir(origem, destino, valor))
+                            System.out.println("Transferência realizada com sucesso!");
+                        else
+                            System.out.println("Erro na transferência!");
+
+                        break;
                     case 4: // extrato 
                         System.out.print("Numero da conta: ");
                         Conta c = banco.buscarConta(leitor.nextInt());
@@ -75,7 +92,7 @@ public class CaixaEletronico {
 
                         banco.adicionarConta(nova);
 
-                        System.out.println("Conta criada: " + nova.getNumeroConta());
+                        System.out.println("Conta criada com sucesso!");
                         break;
                 }
 
